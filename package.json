@@ -6,12 +6,15 @@
   "scripts": {
     "start": "live-server dist",
     "build": "webpack",
-    "watch": "webpack -w"
+    "watch": "webpack -w",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.3",
     "prettier": "2.4.1",
     "ts-loader": "^9.2.6",
     "typescript": "^4.4.3",
@@ -29,5 +32,8 @@
     "@tensorflow/tfjs-converter": "^3.9.0",
     "@tensorflow/tfjs-core": "^3.9.0",
     "three": "^0.133.1"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
